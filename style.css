@@ -1,0 +1,208 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #ff9800;
+}
+
+/* Hero Section */
+.hero {
+  background: url('assets/photo.avif') no-repeat center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+.hero h1 {
+  font-size: 48px;
+}
+.hero p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.btn {
+  background: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #e68900;
+}
+
+/* Email Collector */
+.email-collector {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.email-collector input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+}
+.email-collector button {
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.email-collector button:hover {
+  background: #e68900;
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 50px 20px;
+  text-align: center;
+}
+.filter-buttons {
+  margin-bottom: 20px;
+}
+.filter-btn {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: #ff9800;
+}
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.portfolio-gallery .item,
+.portfolio-gallery2 .items {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.portfolio-gallery .item:hover,
+.portfolio-gallery2 .items:hover {
+  transform: scale(1.05);
+}
+.portfolio-gallery video,
+.portfolio-gallery2 video {
+  width: 100%;
+  display: block;
+}
+.portfolio-gallery p,
+.portfolio-gallery2 p {
+  padding: 10px;
+}
+
+/* About & Contact */
+.about, .contact {
+  padding: 50px 20px;
+  background: #fff;
+  text-align: center;
+}
+.about p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Contact Form */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+.contact input, .contact textarea, .contact button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.contact button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contact button:hover {
+  background: #e68900;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .email-collector {
+    flex-direction: column;
+  }
+}
